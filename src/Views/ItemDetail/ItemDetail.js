@@ -14,7 +14,7 @@ function ItemDetail ({data}) {
           <p className="tituloDetail">{data.titulo}</p>
             <p className="descDetail">{data.descripcion}</p>
             <div className="d-flex justify-content-evenly align-items-center">
-              <p className="precioDetail">{data.precio}</p>
+              <p className="precioDetail">${data.precio}</p>
           </div>
         </div>
       </div>

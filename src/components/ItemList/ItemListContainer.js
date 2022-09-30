@@ -4,6 +4,8 @@ import { useEffect, useState } from 'react';
 import { collection, query, getDocs } from "firebase/firestore"
 import { db } from '../../firebaseConfig';
 import { async } from '@firebase/util';
+import { Link } from 'react-router-dom';
+import Categories from './Categories';
 
 
 function ItemListContainer() {
@@ -15,7 +17,6 @@ function ItemListContainer() {
             const docs = [];
             const querySnapshot = await getDocs(q);
             querySnapshot.forEach((doc) => {
-                // console.log(doc.id, ' => ', doc.data());
                 docs.push({...doc.data(), id: doc.id })
             });
             setItems(docs);
@@ -25,12 +26,11 @@ function ItemListContainer() {
     
  return (
     <>
-        <div div className="album py-5 bg-dark" id="divMain">
-            <div div className="container">
-                <div div id="contenedor-productos">
+        <div className="album py-5 bg-light" id="divMain">
+            <Categories/>
+                <div id="contenedor-productos">
 			            <ItemList productos={items} />
                 </div>
-            </div>
         </div>
     </>
  );
