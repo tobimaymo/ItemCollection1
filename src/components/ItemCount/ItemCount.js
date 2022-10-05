@@ -24,7 +24,7 @@ const [count, setCount] = useState(initial)
     <div>
         <div className='count'> {count}</div>
         <div>
-            <Link to={'/GohanMusic/cart'} className="button-75" onClick={AgregarCantidad}>Comprar</Link>
+            <Link to={'/ItemCollection1/cart'} className="button-75" onClick={AgregarCantidad}>Comprar</Link>
         </div>
         <div>
         <button className="button-74" onClick={resta}> - </button>

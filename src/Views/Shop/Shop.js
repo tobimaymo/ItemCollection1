@@ -1,10 +1,11 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import { collection, addDoc } from 'firebase/firestore';
 import { db } from '../../firebaseConfig';
 import './Shop.css';
 import TextField from '@mui/material/TextField';
 import MessageSuccess from '../../components/MessageSuccess/MessageSuccess';
 import Swal from 'sweetalert2';
+import { CartContext } from '../../Context/CartContext';
 
 const initialState = {
 	name: '',
@@ -25,6 +26,7 @@ const styles = {
 const Shop = () => {
 	const [values, setValues] = useState(initialState);
 	const [purchaseID, setPurchaseID] = useState('');
+	const {items } = useContext(CartContext)
 
 	const handleOnChange = (e) => {
 		const { value, name } = e.target;
@@ -33,8 +35,9 @@ const Shop = () => {
 
 	const onSubmit = async (e) => {
 		e.preventDefault();
+		console.log(values, items, purchaseID);
 		const docRef = await addDoc(collection(db, 'compras'), {
-			values,
+			values, items, purchaseID
 		});
 		setPurchaseID(docRef.id);
 		setValues(initialState);
