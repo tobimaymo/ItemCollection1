@@ -18,12 +18,12 @@ function App (){
         <div className="App">
           <NavBar />
           <Routes>
-            <Route path={'/ItemCollection1/detail/:id'} element={<ItemDetailContainer />} />
-            <Route path={'/ItemCollection1/shop'} element={<Shop/>}/>
-            <Route path={'/ItemCollection1/cart'} element={<Cart/>}/>
-            <Route path={'/ItemCollection1/album/:autor'} element={<Autor/>}/>
-            <Route path={'/ItemCollection1/album'} element={<Todos/>}/>
-            <Route path={'/ItemCollection1/'} element={<Todos/>}/>
+            <Route path={'/CapsuleShop2/detail/:id'} element={<ItemDetailContainer />} />
+            <Route path={'/CapsuleShop2/shop'} element={<Shop/>}/>
+            <Route path={'/CapsuleShop2/cart'} element={<Cart/>}/>
+            <Route path={'/CapsuleShop2/album/:autor'} element={<Autor/>}/>
+            <Route path={'/CapsuleShop2/album'} element={<Todos/>}/>
+            <Route path={'/CapsuleShop2/'} element={<Todos/>}/>
           </Routes>
         </div>
         <FooterBar />

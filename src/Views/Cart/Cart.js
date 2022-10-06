@@ -25,7 +25,7 @@ export const Cart = () => {
     </div>
     <button className="btn btn-sm btn-outline-danger" onClick={() => clear()}> Vaciar </button>
     </div>
-    <Link to={'/ItemCollection1/shop'}>
+    <Link to={'/CapsuleShop2/shop'}>
     <button className="btn btn-sm btn-outline-danger"> Completar Datos </button>
     </Link>
 </>

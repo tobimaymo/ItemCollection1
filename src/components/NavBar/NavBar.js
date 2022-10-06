@@ -9,7 +9,7 @@ const NavBar = () => {
             <div className="container-fluid navbarGrid">
               <div className="sidebarnav">
                 <ul className="listasidebar">
-                  <Link to={'/ItemCollection1/album'} className="links"><p>Home</p></Link>
+                  <Link to={'/CapsuleShop2/album'} className="links"><p>Home</p></Link>
                 </ul>
               </div>
               <CardWidget />
